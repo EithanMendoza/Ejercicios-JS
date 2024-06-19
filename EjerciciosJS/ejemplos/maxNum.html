@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar el Máximo en un Arreglo</title>
+    <script>
+        function encontrarMaximo(arreglo) {
+            return Math.max(...arreglo);
+        }
+
+        function solicitarArreglo() {
+            let cadena = prompt("Ingrese un arreglo de números separados por comas:");
+            if (cadena !== null) {
+                let arreglo = cadena.split(',').map(Number);
+                let resultado = encontrarMaximo(arreglo);
+                alert("Número máximo: " + resultado);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Buscar el Máximo en un Arreglo</h1>
+    <button onclick="solicitarArreglo()">Ingresar Arreglo</button>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .activity {
+            margin-bottom: 20px;
+        }
+        .activity h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .activity pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Actividades en JavaScript</h1>
+
+    <div class="activity">
+        <h2><a href="ejemplos/cadenaInvertida.html">1. Invertir una Cadena</a></h2>
+        <p>Descripción: Escribe una función que tome una cadena y devuelva la cadena invertida.</p>
+        <pre>
+            function invertirCadena(cadena) {
+                return cadena.split('').reverse().join('');
+            }
+
+            // Ejemplo de uso
+            console.log(invertirCadena('Hola Mundo')); // 'odnuM aloH'
+        </pre>
+    </div>
+
+    <div class="activity">
+        <h2><a href="ejemplos/numPrimos.html">2. Número Primo</a></h2>
+        <p>Descripción: Escribe una función que determine si un número es primo.</p>
+        <pre>
+                function esNumeroPrimo(numero) {
+                    if (numero <= 1) return false;
+                    for (let i = 2; i < numero; i++) {
+                        if (numero % i === 0) return false;
+                    }
+                    return true;
+                }
+
+                // Ejemplo de uso
+                console.log(esNumeroPrimo(7)); // true
+                console.log(esNumeroPrimo(10)); // false
+        </pre>
+    </div>
+
+    <div class="activity">
+        <h2><a href="ejemplos/eliminarDuplicados.html">3. Eliminar Duplicados en un Arreglo</a></h2>
+        <p>Descripción: Escribe una función que elimine los elementos duplicados de un arreglo.</p>
+        <pre>
+            function eliminarDuplicados(arreglo) {
+                return [...new Set(arreglo)];
+            }
+
+            // Ejemplo de uso
+            console.log(eliminarDuplicados([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
+        </pre>
+    </div>
+
+    <div class="activity">
+        <h2><a href="ejemplos/factorial.html">4. Factorial de un Número</a></h2>
+        <p>Descripción: Escribe una función que calcule el factorial de un número.</p>
+        <pre>
+            function factorial(numero) {
+                if (numero < 0) return -1;
+                if (numero === 0) return 1;
+                return numero * factorial(numero - 1);
+            }
+
+            // Ejemplo de uso
+            console.log(factorial(5)); // 120
+        </pre>
+    </div>
+
+    <div class="activity">
+        <h2><a href="ejemplos/contarVocales.html">5. Contar Vocales</a></h2>
+        <p>Descripción: Escribe una función que cuente el número de vocales en una cadena.</p>
+        <pre>
+            function contarVocales(cadena) {
+                const vocales = 'aeiouAEIOU';
+                let contador = 0;
+                for (let letra of cadena) {
+                    if (vocales.includes(letra)) {
+                        contador++;
+                    }
+                }
+                return contador;
+            }
+
+            // Ejemplo de uso
+            console.log(contarVocales('Hola Mundo')); // 4
+        </pre>
+    </div>
+
+    <div class="activity">
+        <h2><a href="ejemplos/sumarNum.html">6. Sumar los Números de un Arreglo</a></h2>
+        <p>Descripción: Escribe una función que sume todos los números de un arreglo.</p>
+        <pre>
+            function sumarNumeros(arreglo) {
+                return arreglo.reduce((acc, num) => acc + num, 0);
+            }
+
+            // Ejemplo de uso
+            console.log(sumarNumeros([1, 2, 3, 4, 5])); // 15
+        </pre>
+    </div>
+
+    <div class="activity">
+        <h2><a href="ejemplos/maxNum.html">7. Buscar el Máximo en un Arreglo</a></h2>
+        <p>Descripción: Escribe una función que encuentre el número máximo en un arreglo.</p>
+        <pre>
+            function encontrarMaximo(arreglo) {
+                return Math.max(...arreglo);
+            }
+
+            // Ejemplo de uso
+            console.log(encontrarMaximo([1, 2, 3, 4, 5])); // 5
+        </pre>
+    </div>
+</body>
+</html>

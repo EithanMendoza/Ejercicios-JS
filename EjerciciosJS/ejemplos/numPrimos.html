@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Número Primo</title>
+    <script>
+        function esNumeroPrimo(numero) {
+            if (numero <= 1) return "No es un número primo";
+            for (let i = 2; i < numero; i++) {
+                if (numero % i === 0) return "No es un número primo";
+            }
+            return "Sí es un número primo";
+        }
+
+        function solicitarNumero() {
+            let numero = prompt("Ingrese un número:");
+            if (numero !== null) {
+                numero = parseInt(numero);
+                let resultado = esNumeroPrimo(numero);
+                alert("¿Es primo? " + resultado);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Número Primo</h1>
+    <button onclick="solicitarNumero()">Ingresar Número</button>
+</body>
+</html>

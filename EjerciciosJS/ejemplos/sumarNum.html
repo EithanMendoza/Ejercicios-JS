@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sumar los Números de un Arreglo</title>
+    <script>
+        function sumarNumeros(arreglo) {
+            return arreglo.reduce((acc, num) => acc + num, 0);
+        }
+
+        function solicitarArreglo() {
+            let cadena = prompt("Ingrese un arreglo de números separados por comas:");
+            if (cadena !== null) {
+                let arreglo = cadena.split(',').map(Number);
+                let resultado = sumarNumeros(arreglo);
+                alert("Suma de los números: " + resultado);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Sumar los Números de un Arreglo</h1>
+    <button onclick="solicitarArreglo()">Ingresar Arreglo</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Duplicados en un Arreglo</title>
+    <script>
+        function eliminarDuplicados(arreglo) {
+            return [...new Set(arreglo)];
+        }
+
+        function solicitarArreglo() {
+            let cadena = prompt("Ingrese un arreglo de números separados por comas:");
+            if (cadena !== null) {
+                let arreglo = cadena.split(',').map(Number);
+                let resultado = eliminarDuplicados(arreglo);
+                alert("Arreglo sin duplicados: " + resultado);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Eliminar Duplicados en un Arreglo</h1>
+    <button onclick="solicitarArreglo()">Ingresar Arreglo</button>
+</body>
+</html>

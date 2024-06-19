@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Invertir una Cadena</title>
+    <script>
+        function invertirCadena(cadena) {
+            return cadena.split('').reverse().join('');
+        }
+
+        function solicitarCadena() {
+            let cadena = prompt("Ingrese una cadena:");
+            if (cadena !== null) {
+                let resultado = invertirCadena(cadena);
+                alert("Cadena invertida: " + resultado);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Invertir una Cadena</h1>
+    <button onclick="solicitarCadena()">Ingresar Cadena</button>
+</body>
+</html>
